@@ -49,3 +49,17 @@ La variable "folder" es una lista donde definiremos todas las rutas que queramos
 En la variable "delete_older_days" a partir de cuantos días de antigüedad borraremos los ficheros.
 
 Este script es muy útil para servidores donde almacenemos backups y queramos borrar los antiguos.
+
+### sql_files_backup
+Requisitos:
+
+* No es necesario instalar paquetes/librerías adicionales.
+
+Con este script vamos a generar un dump de una base de datos MySQL y a la vez comprimiremos los ficheros ubicados en una ruta concreta. El nombre del fichero contendrá la fecha del día que se ha generado.
+Una vez hecho, enviará el fichero comprimido generado al servidor que le indiquemos en función del valor de la variable "TYPE" (1 para FTP y 2 para SCP). Una vez hecho esto, borrará el fichero comprimido para no ocupar espacio en el servidor donde generemos la copia.
+
+Es importante tener en cuenta que estamos utilizando variables de entorno con "os.environ.get" para almacenar usuarios, contraseñas, host de base de datos,etc. Estas variables de entorno deben ser definidas previamente en el fichero:
+
+```
+/etc/environment
+```
