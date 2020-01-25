@@ -2,15 +2,15 @@ import os
 from datetime import datetime, date
 from ftplib import FTP
 
-backup_origin_path="/var/docker"
+backup_origin_path="/path/"
 
 #Remote directory where the backup will be placed
 remotedir=os.environ.get('FTP_PATH')
 
 d = datetime.today().strftime('%Y-%m-%d')
 
-sql_file = "docker01-alldatabases-" + d + ".sql"
-storage_file="docker01-storage-"+d+".tgz"
+sql_file = "backup-alldatabases-" + d + ".sql"
+storage_file="backup-storage-"+d+".tgz"
 
 def create_backup():
 
@@ -28,7 +28,7 @@ def create_backup():
     for i in command_list:
         os.system(i)
 
-    os.system('tar -zcf '+storage_file+' /var/docker/storage/')
+    os.system('tar -zcf '+storage_file+' /var/apps/storage/')
     print("Backup complete")
 
 def clean_backup():

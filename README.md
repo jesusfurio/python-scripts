@@ -1,7 +1,7 @@
 # Python Scripts
 Repositorio compuesto por script escritos en Python para sistemas operativos Linux.
 
-## Pre-requisitos
+## Pre-requisitos 📋
 Es necesario tener instalado Python 3 en el equipo donde lo vayamos a utilizar. Si es necesario instalar algun paquete o librería adicional será detallado en la información del propio script.
 
 ### usb_boot
@@ -38,3 +38,14 @@ Pequeña aplicación que realiza consultas a la API Pokeapi y que nos devuelve l
 En un futuro este código se incluirá en una aplicación web para ver de manera más visual los datos devueltos por la API. Podeis ver con más detalle así como la documentación de Pokeapi a través de:
 
 https://pokeapi.co/
+
+### check_files
+Requisitos:
+
+* No es necesario instalar paquetes/librerías adicionales.
+
+Este script en base a unas rutas absolutas que le indiquemos, los recorrera y borrará los ficheros que tengan fecha de creación mayor de X días.
+La variable "folder" es una lista donde definiremos todas las rutas que queramos comprobar.
+En la variable "delete_older_days" a partir de cuantos días de antigüedad borraremos los ficheros.
+
+Este script es muy útil para servidores donde almacenemos backups y queramos borrar los antiguos.
