@@ -4,6 +4,7 @@ Repositorio compuesto por script escritos en Python para sistemas operativos Lin
 ## Pre-requisitos 📋
 Es necesario tener instalado Python 3 en el equipo donde lo vayamos a utilizar. Si es necesario instalar algun paquete o librería adicional será detallado en la información del propio script.
 
+## Carpetas 📦
 ### usb_boot
 Requisitos:
 
