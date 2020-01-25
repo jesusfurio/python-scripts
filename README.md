@@ -63,3 +63,7 @@ Es importante tener en cuenta que estamos utilizando variables de entorno con "o
 ```
 /etc/environment
 ```
+
+## Construido con 🛠️
+Librerías Python usadas:
+* [Requests]: https://es.python-requests.org/es/latest/index.html - Realizar peticiones a una API.
